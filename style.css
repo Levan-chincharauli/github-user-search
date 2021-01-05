@@ -1,0 +1,222 @@
+* { 
+    background-color: rgb(247, 251, 255);
+    margin: 0;
+    padding: 0;
+    font-family: Helvetica, sans-serif; 
+}
+
+#github-logo {
+    height: 55px;
+    display: block;
+    margin: auto;
+}
+
+#website-name {
+    align-content: center;
+    cursor: pointer;
+    font-size: 42px;
+    font-weight: bolder;
+    font-family: montserrat;
+    color: rgb(83, 83, 83);
+    text-decoration: none;
+}
+
+span {
+    color: #0c0c0c;
+}
+
+#header {
+    align-items: center;
+    margin: 10px 0 8vw 0;
+    padding: 2px 5% 2px 5%;
+    display: grid;
+    grid-template-columns: 7% 50% 44%;
+}
+
+form {
+    display:flex;
+}
+
+input {
+    outline: none;
+    width: 100%;
+    height: 45px;
+    border-style: none;
+    color: rgb(10, 10, 10);
+    background-color: #dee1e7;
+    border-radius: 20px;
+    padding: 0 15px;
+}
+
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: rgb(23, 23, 23);
+    opacity: 1; /* Firefox */
+  }
+  
+
+#search-button {
+    margin-left: -51px;
+    cursor: pointer;
+    height: 44px;
+    border-radius: 20px;
+    color: rgb(41, 41, 41);
+    background-color: #dee1e7;
+}
+
+#button-container {
+    margin: 0 14vw;
+}
+
+#top-10 {
+    float: left;
+    color: #333333;
+    font-family: montserrat;
+    padding: 6px 0;
+}
+
+#container {
+    margin: 10% 14vw;
+}
+
+.avatar {
+    height: 75px;
+    border-radius: 50px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.nickname {
+    background-color: white;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    font-size: 15px;
+    font-weight: 600;
+    margin-top: 8px;
+}
+
+.type, .repo {
+    background-color: white;
+    padding: 5px;
+    margin-top: 5px;
+}
+
+
+button {
+    margin-left: 10px;
+    float: right;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    font-family: Helvetica, sans-serif;
+    border-radius: 12px;
+    background-color: #61646a;
+    color: rgb(255, 255, 255);
+    height: 35px;
+    width: 55px;
+
+}   
+
+#grid-button, #list-button {
+    box-shadow: 1px 1px 5px 2px #a5a5a5;
+
+}
+
+button:hover {
+    transition-duration: 0.2s;
+    background-color: rgb(52, 61, 71);
+}
+
+.block {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    text-align: center;
+    padding: 5px;
+    margin: 16px auto;
+    border-radius: 10px;
+    width: 100%;
+    height: 100px;
+    float: left;
+    background-color: #ffffff;
+    box-shadow: 1px 1px 10px 1px #c4c3c3;
+}
+
+#block10 {
+    margin-bottom: 70px;
+}
+
+.second-row{
+    display: block;
+    margin: auto;
+    text-align: center;
+    background-color: white;   
+}
+
+@media screen and (max-width: 1200px) {
+    #header {
+        display: block;
+        margin: auto;
+        text-align: center;
+        width: 80%;
+        padding: 14px;
+    }
+    
+    #button-container {
+        margin: 10px 10vw;
+    }
+    
+    #container {
+        margin: 0 10vw;
+    }
+    .second-row {
+        display: block;
+        margin: auto;
+        height: 50px;
+    }
+
+    #search-div {
+        margin-top: 4vw;
+    }
+
+    #website-name {
+        display: block;
+        margin: 0 auto;
+    }
+    
+}
+
+/* hidden section CSS */
+#hidden-block {
+    border-radius: 10px;
+    padding: 20px;
+    height: 300px;
+    margin: 10px 14vw;
+    background-color: rgb(255, 255, 255);
+}
+
+#hidden-avatardiv {
+    background-color: white;
+}
+
+#hidden-avatar {
+    border-radius: 20px;
+    height: 150px;
+}
+
+#backbutton-div {
+    margin-left: 14vw;
+}
+
+.hidden-backbutton {
+    color: rgb(255, 255, 255);
+    background-color: #656d76;
+
+}
+
+#user-name {
+    margin-left: 1px;
+    font-size: 25px;
+    background-color: #ffffff;
+}

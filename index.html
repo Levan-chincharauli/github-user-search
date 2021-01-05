@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/style.css">
+    <script src="/index.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+    <title>Search Github Users</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>    
+<!---------------------------------------------------------------------------------------------------------------------------------->
+<body onload="loadData()">
+
+    <div id="header" class="header">
+            <a href="/index.html"><img src="/GitHub-Mark-64px.png" id="github-logo"></a>
+            <h1><a href="/index.html" id="website-name"><span>GitHub</span> User Search</a></h1>
+        <div id="search-div">
+            <form class="example">
+                <input type="text" id="search-input" placeholder="Search..." name="search">
+                <button id="search-button" class="fa fa-search" type="submit"></button>
+            </form>
+        </div>
+    </div>
+    
+    <div class="button-container" id="button-container">
+        <button id="grid-button" class="fa fa-th-large"></button>
+        <button id="list-button" class="fa fa-bars"></button>
+        <h3 id="top-10">Top 10 users</h3>
+    </div>
+
+
+    <!-- Hidden divs that shows up after completing search -->
+    <div id="backbutton-div" style="display: none;">
+        <a href="/index.html"><button class="fa fa-arrow-circle-left" id="hidden-backbutton"></button></a>
+    </div>
+
+    <div id="hidden-block" style="display: none;">
+        <div id="hidden-avatardiv">
+            <img src="" id="hidden-avatar" alt="avatar">
+            <h1 id="user-name"></h1>
+        </div>
+        <div id="followers"></div>
+        <div id="repos"></div>
+    </div>
+<!---------------------------------------------------------------------------------------------------------------------->
+    <div id="container">
+
+        <div class="block" id="block1">
+            <div class="first-row" style="background-color: rgb(255, 255, 255);">
+                <a href="#" class="user-url" style="background-color: #fff;">
+                    <img class="avatar" src="">
+                </a>
+                <h1 class="nickname"></h1>
+            </div>
+            <div class="second-row">
+                <div class="type"></div>
+                <div class="repo"></div>
+            </div>
+        </div>
+
+        <div class="block" id="block2">
+            <div class="first-row" style="background-color: rgb(255, 255, 255);">
+                <a href="#" class="user-url" style="background-color: #fff;">
+                    <img class="avatar" src="">
+                </a>
+                <h1 class="nickname"></h1>
+            </div>
+            <div class="second-row">
+                <div class="type"></div>
+                <div class="repo"></div>
+            </div>
+        </div>
+
+        <div class="block" id="block3">
+            <div class="first-row" style="background-color:white">
+                <a href="#" class="user-url" style="background-color: white;">
+                    <img class="avatar" src="">
+                </a>
+                <h1 class="nickname"></h1>
+            </div>
+            <div class="second-row">
+                <div class="type"></div>
+                <div class="repo"></div>
+            </div>
+        </div>
+
+        <div class="block" id="block4">
+            <div class="first-row" style="background-color: white;">
+                <a href="#" class="user-url" style="background-color: white">
+                    <img class="avatar" src="">
+                </a>
+                <h1 class="nickname"></h1>
+            </div>
+            <div class="second-row">
+                <div class="type"></div>
+                <div class="repo"></div>
+            </div>
+        </div>
+
+        <div class="block" id="block5">
+            <div class="first-row" style="background-color: white;">
+                <a href="#" class="user-url" style="background-color: white;">
+                    <img class="avatar" src="">
+                </a>
+                <h1 class="nickname"></h1>
+            </div>
+            <div class="second-row">
+                <div class="type"></div>
+                <div class="repo"></div>
+            </div>
+        </div>
+
+        <div class="block" id="block6">
+            <div class="first-row" style="background-color: white;">
+                <a href="#" class="user-url" style="background-color: white;">
+                    <img class="avatar" src="">
+                </a>
+                <h1 class="nickname"></h1>
+            </div>
+            <div class="second-row">
+                <div class="type"></div>
+                <div class="repo"></div>
+            </div>
+        </div>
+
+        <div class="block" id="block7">
+            <div class="first-row" style="background-color: white;">
+                <a href="#" class="user-url" style="background-color: white;">
+                    <img class="avatar" src="">
+                </a>
+                <h1 class="nickname"></h1>
+            </div>
+            <div class="second-row">
+                <div class="type"></div>
+                <div class="repo"></div>
+            </div>
+        </div>
+
+        <div class="block" id="block8">
+            <div class="first-row" style="background-color: white;">
+                <a href="#" class="user-url" style="background-color: white;">
+                    <img class="avatar" src="">
+                </a>
+                <h1 class="nickname"></h1>
+            </div>
+            <div class="second-row">
+                <div class="type"></div>
+                <div class="repo"></div>
+            </div>
+        </div>
+
+        <div class="block" id="block9">
+            <div class="first-row" style="background-color: white;">
+                <a href="#" class="user-url" style="background-color: #fff;">
+                    <img class="avatar" src="">
+                </a>
+                <h1 class="nickname"></h1>
+            </div>
+            <div class="second-row">
+                <div class="type"></div>
+                <div class="repo"></div>
+            </div>
+        </div>
+
+        <div class="block" id="block10">
+            <div class="first-row" style="background-color: white;">
+                <a href="#" class="user-url" style="background-color: white;">
+                    <img class="avatar" src="">
+                </a>
+                <h1 class="nickname"></h1>
+            </div>
+            <div class="second-row">
+                <div class="type"></div>
+                <div class="repo"></div>
+            </div>                
+        </div>        
+    </div>
+<!------------------------------------------------------------------------------------------------------------------------------------------->
+<script>
+    // display searched users
+    var hiddenAvatar = document.getElementById("hidden-avatar");
+    var hiddenNickname = document.getElementById("user-name");
+    var hiddenFollowers = document.getElementById("followers");
+    var hiddenRepos = document.getElementById("repos");
+    let user_name = document.getElementById("search-input").value.trim();
+    
+
+    document.getElementById("search-button").addEventListener("click", function () {
+        fetch(`https://api.github.com/users/${user_name}`)
+            .then(response => response.json())
+            .then(function(data) {
+                console.log(data);
+                if (data.message === "Not Fount") {
+                    alert("User does not exist");
+                    return false;
+                } else {
+                    hiddenAvatar.src = "${data.avatar_url}";
+                    hiddenNickname.innerHTML = data.login;
+                    hiddenFollowers.innerHTML = data.followers;
+                    hiddenRepos.innerHTML = data.repos;
+                }
+            })
+        }
+    );
+</script>
+
+<script>
+    // getting top 10 users info for landing page
+    var avatar = document.getElementsByClassName("avatar");
+    var nickname = document.getElementsByClassName("nickname");
+    var type = document.getElementsByClassName("type");
+    var repos = document.getElementsByClassName("repo");
+    var userUrl = document.getElementsByClassName("user-url")
+    function loadData() {
+        for (var i=0; i<10; i++) {
+            avatar[i].src = userList[i].avatar_url;
+            nickname[i].innerHTML = userList[i].login;
+            type[i].innerHTML = userList[i].type;
+            repos[i].innerHTML = userList[i].url/followers;
+            userUrl[i].href = userList[i].html_url;
+        }
+    }
+</script>
+
+
+<!--JQuery functions for grid/list view-->
+<script>
+    $(document).ready(function(){
+
+        // gridview function
+        $("#grid-button").click(function(){
+            $("#container").css({
+                "display": "grid", 
+                "align-content": "space-evenly",
+                "grid-template-columns": "30% 30% 30%",
+                "grid-gap": "5%",
+                "margin-top": "12%"
+            });
+            $(".block").css({ 
+                "display": "block",
+                "height": "200px",
+                "margin": "auto"
+            });
+            $(".first-row").css({
+                "display": "block",
+                "margin": "auto"
+            })
+            $(".second-row").css({
+                "display": "block",
+                "margin": "auto",
+                "text-align": "center"
+            })
+        });
+
+        // listview function
+        $("#list-button").click(function(){
+            $("#container").css({
+                "display": "block",
+            });
+            $(".block").css({
+                "height": "100px",
+                "margin-bottom": "20px",
+                "display": "grid",
+                "grid-template-columns": "50% 50%"
+            });
+            $("#block10").css({
+                "margin-bottom": "70px"
+            })
+            
+        });
+    });
+</script>
+
+</body>
+</html>
